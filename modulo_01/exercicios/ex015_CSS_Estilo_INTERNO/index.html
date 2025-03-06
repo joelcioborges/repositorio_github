@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Estílos InLine</title>
+</head>
+<body>
+    <h1>Capítulo 12</h1>
+    <h1>Estílos CSS</h1>
+    <h3>13 de dezembro de 2023</h3>
+    <p>Por motivo didático o Professor achou melhor continuar o desenvolvimento do aprendizado em uma cópia do exercício anterior.</p>
+    <hr>
+    <h1><ins>Introdução</ins>:</h1>
+    <ul>
+        <li>Pronunciar as CSS ou a CSS é indiferente, pois ambas as formas de expressão estão corretas;</li>
+        <li>CSS (Castating Style Sheeds) signifa Folhas de Estilo em Cascata;</li>
+        <li>As CSS podem ser aplicadas de 3 (três) formas:
+            <ol>
+                <li style="text-align: justify;"><b>In Line</b>: é o mais fraco de todos e menos recomendado. Mas é um bom começo, e implica em dizer que o ESTILO será aplicado na mesma linha que a SEMÂNTICA;</li>
+                <li style="text-align: justify;"><b>CSS Interno</b> ou <b>CSS Local</b>: nessa técnica o estilo é aplicado de forma separado, facilitando a visualização e permitindo com maior facilidade, por parte do desenvolvedor, em identificar o que é SEMÂNTICA ou ESTILO;</li>
+                <li style="text-align: justify;">  ... </li>
+            </ol></li>
+        <li>No exemplo abaixo é uma demostração de algo que considerado <mark>ERRADO</mark> porque o código em relação ao que é estuda atualmente seria <b>obsoleto</b> ou <b>antigo</b>. Click no <a href="001_exemplo_antigo.html">link</a> para observar;
+        <pre>
+        ...
+        ...
+        ...
+        &lt;body <mark style="background-color: rgb(243, 132, 132);">bgcolor</mark>="red"&gt;
+            &lt;h1&gt;Olá! Mundo.&lt;/h1&gt;
+            &lt;p&gt;&lt;<mark style="background-color: rgb(243, 132, 132);">font</mark> color="white"&gt;Oi!&lt;/<mark style="background-color: rgb(243, 132, 132);">font</mark>&gt;&lt;/p&gt;
+        &lt;/body&gt;
+        </pre>
+        </li>
+        <li>verifica-se que ao parar o mouse sobre o código a própria IDE VS Code informa que os médotos &lt;brcolor&gt; e &lt;font&gt; estão fora da conformidade. Em via de regra qualquer informação que IDE apresentar em VERMELHO está obsoleta.</li>
+    </ul>
+    <br>
+    <h1>Forma Correta:</h1>
+    <h2>Estilo: In Line</h2>
+    <ul>
+        <li>O exemplo apresentado anteriormente refere-se a HTML4, ou seja, uma forma antiga de se escrever páginas para internet;</li>
+        <li>Atualmente, em HTML5 os estílos são aplicados da forma em que o exemplo abaixo foi escrito. Click no <a href="002_exemplo_css_Certo.html">link</a> para que o resultado possa ser observado.
+        <pre>
+    ...
+    ...
+    ...
+    &lt;body style="background-color: lightskyblue; font-family: Arial, Helvetica, sans-serif; font-size: 20px;"&gt; &lt;!-- em font-size 20 pixels será o tamanho base e todas as outras fontes seguirão um tamanho proporcional --&gt;
+        &lt;h1 style="color: mediumblue;"&gt;Capítulo 1&lt;/h1&gt;
+        &lt;h2 style="color: darkred;"&gt;Capítulo 1.1&lt;/h2&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, consequatur tempora quod dolores at suscipit molestiae inventore earum, dolorum voluptate debitis natus mollitia necessitatibus? Sit est esse pariatur placeat cupiditate! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus cumque officia ratione sint reprehenderit soluta unde, repellat rem in ullam illo quo facilis, ea fugit iusto error reiciendis nam neque.&lt;/p&gt;
+        &lt;h2 style="color: darkred;"&gt;Capítulo 1.2&lt;/h2&gt;
+        &lt;p style="text-align: justify;"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur labore cumque ullam numquam quod quasi veritatis beatae magnam aliquid, fuga quidem, adipisci libero maiores. Amet iste repellat earum nam perferendis? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime quae laborum velit ut laudantium ipsam earum est eligendi amet ipsum reiciendis, iste sequi ratione fugit itaque accusantium libero porro odio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit at dolor reprehenderit inventore ab beatae quasi libero, cumque iure possimus mollitia molestias blanditiis excepturi minus commodi quos ipsum. Molestiae, quod?&lt;/p&gt;
+        &lt;h1 style="color: mediumblue;"&gt;Capítulo 2&lt;/h1&gt;
+        &lt;h2 style="color: darkred;"&gt;Capítulo 2.1&lt;/h2&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta nobis reprehenderit expedita. Minus, dicta possimus ad veritatis deleniti incidunt amet ullam tenetur nisi pariatur, sed, autem rerum facilis velit repellat?&lt;/p&gt;
+    &lt;/body&gt;
+        </pre>
+        </li>
+        <li style="text-align: justify;">Vale lembrar que o HTML5 foi projetado para dar ênfase a SEMÂNTICA, ou seja, dar sentido ao que foi escrito para a internet. Então a diferença no tamanho das letras implica em dizer que o desenvolvedor quiz dar um significado aquela ação de escrever o texto como letras de tamanho diferente;</li>
+        <li style="text-align: justify;">Essa técnica de aplicação de estílo tem uma GRANDE INCOVENIÊNCIA que é o fato de ter que realizar as aplicações localmente, então, o código contiver 200 aplicações de estilo diferentes será bem trabalhoso alterar cada uma individualmente. Por esse motivo que a técnica In Line é a mais fraca de todas;</li>
+        <li style="text-align: justify;">A técnica In Line também apresenta outra desvantagem que é a POLUÍÇÃO do código, deixando a MANUTENÇÃO complicada para o desenvolvedor. Fica difícil definir o que é SEMÂNTICA e o que é ESTÍLO;</li>
+        <li style="text-align: justify;">O professor DIZENDO... MAS, PIOR AINDA kkkk... Se depois que o site estiver pronto o cliente quiser alterar todos os estilos, será bem complicado.</li>
+        <li style="text-align: justify;">O Método In Line apesar de ser atual e moderno não é reconmendável para o DIA A DIA e sim para situações pontuais onde as outras técnicas se mostraram não muito eficiente.</li>
+    </ul>
+    <br>
+    <h2>Estilo: Locais ou Internos</h2>
+    <ul>
+        <li>Nessa forma de aplicação de estilo serão colocados <mark>seletores</mark> na parte HEAD do códido que vão corresponder aos locais de aplicação do estilo;</li>
+        <li>Os seletores estarão dentro da TAG &lt;style&gt; acompanhadas por CHAVES. Então, se o estilo tiver de ser aplicado a tag &lt;body&gt; coloca-se dentro da TAG &lt;style&gt; acompanhada por chaves, o mesmo procedimento deve ser seguido para outras TAGs.</li>
+        <li>Click no <a href="003_exemplo_CSS-local.html">link</a> para que o resultado possa ser observado.</li>
+    </ul>
+    <pre>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="pt-br"&gt;
+        &lt;<mark style="background-color: yellowgreen;">head</mark>&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;link rel="shortcut icon" href="favicon.ico" type="image/x-icon"&gt;
+            &lt;title&gt;CSS Local ou Interno&lt;/title&gt;
+            &lt;style&gt;
+                body {
+                background-color: lightblue;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 20px;
+                }
+                h1 {
+                color: darkblue;
+                background-color: darkcyan;
+                }
+                h2 {
+                color: darkred;
+                }
+                p {
+                text-align: justify;
+                }
+            &lt;/style&gt;
+        &lt;<mark style="background-color: yellowgreen;">/head</mark>&gt;
+        &lt;body&gt;
+            &lt;h1&gt;Capítulo 1&lt;/h1&gt;
+            &lt;h2&gt;Capítulo 1.1&lt;/h2&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, consequatur tempora quod dolores at suscipit molestiae inventore earum, dolorum voluptate debitis natus mollitia necessitatibus? Sit est esse pariatur placeat cupiditate! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus cumque officia ratione sint reprehenderit soluta unde, repellat rem in ullam illo quo facilis, ea fugit iusto error reiciendis nam neque.&lt;/p&gt;
+            &lt;h2&gt;Capítulo 1.2&lt;/h2&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur labore cumque ullam numquam quod quasi veritatis beatae magnam aliquid, fuga quidem, adipisci libero maiores. Amet iste repellat earum nam perferendis? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime quae laborum velit ut laudantium ipsam earum est eligendi amet ipsum reiciendis, iste sequi ratione fugit itaque accusantium libero porro odio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit at dolor reprehenderit inventore ab beatae quasi libero, cumque iure possimus mollitia molestias blanditiis excepturi minus commodi quos ipsum. Molestiae, quod?&lt;/p&gt;
+            &lt;h1&gt;Capítulo 2&lt;/h1&gt;
+            &lt;h2&gt;Capítulo 2.1&lt;/h2&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta nobis reprehenderit expedita. Minus, dicta possimus ad veritatis deleniti incidunt amet ullam tenetur nisi pariatur, sed, autem rerum facilis velit repellat?&lt;/p&gt;
+        &lt;/body&gt;
+            </pre>
+        <ul>
+            <li>Como foi percebido basta colocar somente um seletor para que todos tenham o mesmo efeito, então, se existirem 200 tags &lt;h1&gt; só será preciso aplicar o estilo somente 1 vez;</li>
+            <li>Cada linha da TAG &lt;style&gt; dentro de HEAD chama-se <mark>DECLARAÇÃO</mark> que se resume por um conjunto de <b>PROPRIEDADE</b> e <b>VALOR</b>;</li>
+            <li>Com essa técnica pode-se perceber que o código ficou muito melhor apresentado a SEMÂNTICA está separada do ESTÍLO;</li>
+            <li>Essa técnica é recomendada quando o desenvolvedor tiver uma página construída e um estílo deve ser aplicada a ela sem que outras páginas seja afetadas</li>
+            <li>Tags antigas devem ser evitadas;</li>
+            <li>A técnica INTERNA de aplicação de estilo apresenta 2 desvantagens:
+                <ol>
+                    <li>A tendência das configurações de ESTILO se tornarem miores que o conteúdo do SITE. Isso acarreta em um incômodo no momento em que se desejar abrir o código para manutenção ou ajuste;</li>
+                    <li>Se o desenvolvedor criar cerca de 30 páginas com o mesmo estilo. A parte do códito de configuração terá que ser copiada para as outras também.</li>
+                </ol>
+            </li>
+
+        </ul>
+</body>
+</html>
